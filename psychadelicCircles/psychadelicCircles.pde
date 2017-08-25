@@ -3,6 +3,7 @@ int i; int j; int k; int l; int m; int n; int o; int p; // different letter for 
 int q; int r; int s; int t; int u; int v; int w; int x; // allows the hues to be staggered
 int colorChange;
 int moveCircle;
+int drawA = 0;
 
 void setup() {
   size(600, 600);
@@ -157,21 +158,28 @@ void triangles() { //background that changes colors in a circley way
 
 void circles() { // by pressing a key, you cause a circle to drift across the screen
   // do the boolean thing for each key in order to allow
-  int drawA = 0;
   // each circle to stay on screen without holding down a key
-  switch(keyPressed) {
-    case 'a':
+  if(keyPressed == true) {
+    if (key == 'a') {
       drawA = 1;
-    case 'b':
+    }
+    if (key == 'A') {
       drawA = 0;
+    }
   }
   // actually draw the circles
-  moveCircle = moveCircle + 1;
+  if (moveCircle < 599) {
+    moveCircle = moveCircle + 1;
+  }
+  if (moveCircle == 599) {
+    moveCircle = moveCircle - 1;
+  }
+  
   if (drawA == 1) {
-    stroke(0, 100, 100);
-    strokeWeight(3);
-    fill(0);
-    ellipse(75, 50, 50, 50);
+    stroke(colorChange, 100, 100);
+    strokeWeight(2);
+    noFill();
+    ellipse(moveCircle, 50, 50, 50);
   }
   println(drawA);
 }
