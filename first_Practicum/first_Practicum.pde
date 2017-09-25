@@ -5,7 +5,7 @@
  * Reflective Drawing
  * 
  * Zoa Katok
- * 9 September 2017
+ * 25 September 2017
  * 
  * This is a drawing program on a black background. The line follows your cursor (really two differently colored lines, 
  * one slightly on top of the other). There are 4 drawing options: no reflection, reflection across the
