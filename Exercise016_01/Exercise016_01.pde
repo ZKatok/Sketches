@@ -1,16 +1,36 @@
-int addX;
-int addY;
-int quadX = 0 + addX;
-int quadY = 0 + addY;
+int addcircleX;
+int addcircleY;
+int circleX = 25;
+int circleY = 25;
 
 void setup() {
-  size(600, 400);
+  size(400, 700);
   background(0);
-  fill(255);
-  addX++;
-  addY++;
 }
 
 void draw() {
-  quad(quadX, quadY+150, quadX+50, quadY+100, quadX+100, quadY+150, quadX+50, quadY+200);
+  frameRate(100);
+  
+  if (circleX == 25) {
+    addcircleX = 1;
+  }
+  if (circleX == 375) {
+    addcircleX = -1;
+  }
+  if (circleY == 25) {
+    addcircleY = 1;
+  }
+  if (circleY == 675) {
+    addcircleY = -1;
+  }
+  
+  circleX += addcircleX;
+  circleY += addcircleY;
+  ellipse(circleX, circleY, 50, 50);
+}
+
+void keyPressed() {
+  background(0);
+  circleX = 25;
+  circleY = 25;
 }
