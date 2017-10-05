@@ -1,5 +1,6 @@
 // press any key to make a mAgIcAl sQuArE appear!!!
 // coded keys change the font
+NOT DONE
 
 int hueRect = 0;
 PFont font;
