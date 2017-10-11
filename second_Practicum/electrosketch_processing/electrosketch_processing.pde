@@ -35,7 +35,6 @@ void setup() {
   background(0,0,100);
   myPen = new esPen(250,250,initColor);
   myPort = new Serial(this, portName, 9600);
-  myPort.clear();
 }
 
 
@@ -50,7 +49,10 @@ void draw() {
       myPen.yPrev = myPen.y;
       myPen.x = esPenState[0];
       myPen.y = esPenState[1];
-      myPen.buttonValue = esPenState[2];
+      myPen.hueValue = esPenState[2];
+      if (esPenState[3] == 1) {
+        myPen.clearScreen();
+      }
       myPen.scratch();
     } 
   }
@@ -71,42 +73,33 @@ class esPen {
   int hueValue;
   int satValue;
   int brightnessValue;
-  int buttonValue;
   color esHSB; 
  
 // Constructor to create object from class definition
 // hueValue set the hue (color) of the pen. Color is
 // determined by its hue, saturation, and brightness.
 // The constructor sets inital values.
-  esPen (int xpos, int ypos, int bV) {
+  esPen (int xpos, int ypos, int hV) {
     x = xpos;
     y = ypos;
     xPrev = xpos;
     yPrev = ypos;
-    hueValue = 0; 
+    hueValue = hV; 
     satValue = 50; 
     brightnessValue = 50; 
     esHSB = color(hueValue,satValue,brightnessValue);
-    buttonValue = bV;
   }
  
 // Method to draw the etch point. First the fill is set to 
 // the color set by hueValue. Saturation and brightness are static
 // but can be changed here.
   void scratch() {
-    hueValue += 5;
-    if (hueValue == 100) {
-      hueValue = 0;
-    }
-    //esHSB = color(hueValue,50,50); // Color can be changed here.
-    esHSB = color(2,50,50); // Color can be changed here.
+    esHSB = color(hueValue,100,100); // Color can be changed here.
     stroke( esHSB );
     line(x, y, xPrev, yPrev);
   }
   
   void clearScreen() {
-    if (buttonValue == 1) {
-      background(0, 0, 100);
-    }
+    background(0, 0, 100);
   }
 }
