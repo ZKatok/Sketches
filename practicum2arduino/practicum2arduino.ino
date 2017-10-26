@@ -23,7 +23,7 @@ unsigned long debounceDelay3 = 50;    // the debounce time; increase if the outp
 void setup() {
   Serial.begin(9600);
   pinMode(buttonPin2, INPUT); // initialize pushbutton pin as an input
-  pinMode(buttonPin2, INPUT);
+  pinMode(buttonPin3, INPUT);
 }
 
 void loop() {
@@ -68,12 +68,12 @@ int reading3 = digitalRead(buttonPin3);
       buttonState3 = reading3;
     }
   }
-  lastButtonState3 = reading3;
+  lastButtonState3 = reading3; 
 
   Serial.print(potVal0+", "); // red joystick l/r
   Serial.print(potVal1+", "); // red joystick u/d
   Serial.print(potVal2+", "); // blue joystick l/r
-  Serial.print(potVal3+", "); // blue joystick u/d
+  Serial.print(potVal3+", "); // blue joystick u/d 
   
   if (buttonState2 == 1) { // red button pressed
     Serial.print(1+", ");
@@ -85,7 +85,7 @@ int reading3 = digitalRead(buttonPin3);
     Serial.print(1+", ");
   } else if (buttonState3 == 0) { // blue button not pressed
     Serial.print(0+",\0");
-  }
+  } 
   Serial.println(",\0");
   delay(100);
 }
