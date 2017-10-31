@@ -1,6 +1,6 @@
 int x = 70;
 int move;
-int turn;
+int turnNose;
 int handX = x + 65;
 // int roundHandX;
 float preHandY;
@@ -15,17 +15,17 @@ void setup() {
 void draw() {
   background(193);
   rect(-1, 350, 502, 50); // ground
-  smowman(x, turn, handX, roundHandY);
+  smowman(x, turnNose, handX);
   x = x + move;
 
   // change x position of Mr. Smowman
   if (x == 70) {
     move = 1;
-    turn = 0;
+    turnNose = 0;
   }
   if (x == 430) {
     move = -1;
-    turn = 40;
+    turnNose = 40;
   }
 
   //move arm by changing X coordinate of hand.
@@ -51,15 +51,15 @@ void draw() {
   //  println(handY, roundHandY);
 }
 
-void smowman(int x, int turn, int handX, int roundHandY) {
+void smowman(int x, int turnNose, int handX) {
   // add number to x to make things off center where they need to be
   rect(x - 35, 120, 70, 5);        // hat brim
   rect(x - 20, 75, 40, 45);        // hat body
   ellipse(x, 150, 50, 50);         // head
   ellipse(x - 10, 140, 5, 5);      // his right eye
   ellipse(x + 10, 140, 5, 5);      // his left eye
-  rect(x - turn, 149, 40, 3);      // nose; 'turn' changes the nose position so it
-  // looks like he's looking a certain direction
+  rect(x - turnNose, 149, 40, 3);  // nose; 'turnNose' changes the nose position so it
+                                   // looks like he's looking a certain direction
   line(x - 15, 155, x - 15, 162);  // his right vertical mouth line
   line(x - 15, 162, x + 15, 162);  // horizontal mouth line
   line(x + 15, 155, x + 15, 162);  // his left vertical mouth line
