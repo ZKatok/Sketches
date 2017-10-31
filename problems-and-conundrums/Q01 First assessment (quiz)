@@ -1,0 +1,16 @@
+##Introduction to Coding##
+##Quiz one##
+
+**Instructions** Read the problems and upload your solutions as instructed. Four problems. Ten points. All class period. 
+
+If you finish early, work quietly on earlier class exercises and make sure that all of your exercises (Handouts 4,6–9) are uploaded to GitHub. Remember to name each exercise sketch using the following scheme: Exercise00_00, where the first number (00) is the handout number and the second (00) is the exercise number. Note the underscore character. For numbers with only unit values, use a zero in the tens position. I will award points for exercises when I can see them in your GitHub repository for exercises.
+
+**Problem one** Before you move on to Problems two through four, you should fork the "problems-and-conundrums" repository from Sage-Ridge-Coding. Search for the repository in GitHub, then use the fork button to "fork" a copy to your repository. Rename you forked copy "problems-and-conundrums-solutions". I will place problems in this repository through the course of the year. Once you have forked the repository, please clone the repository to your desktop. You should have both the templates and problems-and-conundrums repositories in your github account and cloned and synced on your laptop drive. Two points.
+
+**Problem two** On your laptop, create a Processing template sketch that reflects your understanding of what *beautiful code* means. Consider the three elements of code we discussed in class and what Rheas and Fry have to say about it in the textbook. Using multi-line comments, create a header to your sketch that includes your name, the date the sketch was written, and an explanation of the purpose of the sketch. Include elements of a typical Processing sketch. Name your sketch *Quiz01_BeautifulCode*. Two points.
+
+**Problem three** Create a simple sketch that employs mouseX and mouseY to demonstrate how the HSB color mode can be used to show the three axes (H, S, and B) of the mode. This problem is worth four points. Upload the sketch (and enclosing folder) to your "problems-and-conundrums-solutions" repository in GitHub. Use the phrase "final commit" as a description of the commit. Your solution must not have a time stamp past the end of class. Email me you have completed the problem and uploaded the solution. Name your sketch *Quiz01_HSB* Four points. 
+
+**Problem four** Email me your GitHub login name now and accept the invitation I send back to join the Sage-Ridge-Coding team. Two points.
+
+

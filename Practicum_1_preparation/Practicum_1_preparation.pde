@@ -1,70 +1,15 @@
-/*
- *
- * Practicum one
- * 
- * Reflective Drawing
- * 
- * Zoa Katok
-<<<<<<< HEAD
- * 9 September 2017
-=======
- * 25 September 2017
->>>>>>> cd8bd9f33dc6cb17f4c111c1acda0531ac1f9b58
- * 
- * This is a drawing program on a black background. The line follows your cursor (really two differently colored lines, 
- * one slightly on top of the other). There are 4 drawing options: no reflection, reflection across the
- * vertical midline, reflection across the horizontal midline, and reflections across the vertical, horizontal,
- * and diagonal midlines. There are also 3 color combinations to choose from plus a black option that serves as an eraser.
- * Finally, there is an option to completely clear the screen.
- * 
- * INSTRUCTIONS:
- * In order to draw the line, you must hold down a key 1-4, which will draw the main line wherever the cursor is
- * and any reflections are based on where the cursor is.
- *   1 -- no reflection
- *   2 -- reflection across the vertical midline
- *   3 -- reflection across the horizontal midline
- *   4 -- reflections across the vertical, horizontal, and diagonal midlines
- * To change the colors:
- *   q -- purple and light purple
- *   w -- red and orange
- *   e -- white and blue (default)
- *   r -- black
- * To clear the screen, press x.
- *
- */
-
-boolean savePDF;
-
-// Stuff you need but can safely ignore right now
-import processing.pdf.*;
-import java.util.Calendar;
-import generativedesign.*;
-
-
-// Your variables need to be declared here
 color mainCircleColor = color(255); // white
 color extraCircleColor = color(5, 118, 252); // blue
 
-// Code you want to have run once goes here
 void setup() {
   size(1050, 600);
   frameRate(100);
   background(0);
   noStroke();
-} 
+}
 
-// Code you loop until you stop the sketch
-void draw() { 
+void draw() {
 
-  // **Leave this conditional here but maybe modify if you understand what it does**
-  if (savePDF) {
-    beginRecord(PDF, timestamp()+".pdf");
-    noStroke();
-    colorMode(HSB, 360, 100, 100, 100);
-  } 
-
-
-  // YOUR CODE GOES HERE
   if (keyPressed) {
     if (key == '1') {
       mode1(); // draw one line where the cursor is
@@ -98,29 +43,7 @@ void draw() {
       background(0); // clear screen
     }
   }
-
-  // **Leave this conditional here**
-  if (savePDF) {
-    savePDF = false;
-    endRecord();
-  }
-} 
-
-
-// **Printing function. Leave here.**
-
-void keyReleased() {
-  if (key == 's' || key == 'S') saveFrame(timestamp()+"_##.png");
-  if (key == 'p' || key == 'P') savePDF = true;
 }
-
-// timestamp
-String timestamp() {
-  Calendar now = Calendar.getInstance();
-  return String.format("%1$ty%1$tm%1$td_%1$tH%1$tM%1$tS", now);
-}
-
-// defining functions I created
 
 void mode1() { // draw a line where the cursor is
   fill(mainCircleColor);
@@ -170,8 +93,4 @@ void mode4() { // draw 4 lines (reflections across horizontal and vertical midli
   ellipse(mouseX - 2*(mouseX-(width/2)), mouseY + 2*((height/2)-mouseY), 10, 10); // puts circle diagonal from original
   fill(extraCircleColor);
   ellipse(mouseX - 2*(mouseX-(width/2)) -7, mouseY + 2*((height/2)-mouseY) -7, 10, 10);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cd8bd9f33dc6cb17f4c111c1acda0531ac1f9b58

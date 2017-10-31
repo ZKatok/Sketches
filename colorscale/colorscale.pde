@@ -8,6 +8,7 @@ int rect2Add = 1;
 void setup() {
   size(400, 400);
   colorMode(HSB, 500, 500, 500);
+  rectMode(CENTER);
 }
 
 void draw() {
@@ -31,7 +32,7 @@ void draw() {
   }
   noStroke();
   fill(rectFill, 400, 500);
-  rect(50, 50, 250, 250);
+  rect(200, 200, 250, 250);
   
   // make smol square in middle change colors by changing the hue value
   rect2Fill = rect2Fill + rect2Add;
@@ -43,5 +44,5 @@ void draw() {
   }
   noStroke();
   fill(rectFill, 400, 500);
-  rect(125, 125, 150, 150);
+  rect(200, 200, 150, 150);
 }

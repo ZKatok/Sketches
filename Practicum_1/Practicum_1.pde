@@ -5,11 +5,7 @@
  * Reflective Drawing
  * 
  * Zoa Katok
-<<<<<<< HEAD
  * 9 September 2017
-=======
- * 25 September 2017
->>>>>>> cd8bd9f33dc6cb17f4c111c1acda0531ac1f9b58
  * 
  * This is a drawing program on a black background. The line follows your cursor (really two differently colored lines, 
  * one slightly on top of the other). There are 4 drawing options: no reflection, reflection across the
@@ -170,8 +166,4 @@ void mode4() { // draw 4 lines (reflections across horizontal and vertical midli
   ellipse(mouseX - 2*(mouseX-(width/2)), mouseY + 2*((height/2)-mouseY), 10, 10); // puts circle diagonal from original
   fill(extraCircleColor);
   ellipse(mouseX - 2*(mouseX-(width/2)) -7, mouseY + 2*((height/2)-mouseY) -7, 10, 10);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cd8bd9f33dc6cb17f4c111c1acda0531ac1f9b58
