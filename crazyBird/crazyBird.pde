@@ -1,5 +1,6 @@
 // click to restart
 
+<<<<<<< HEAD
 int mode = 0; // clicking different buttons in start screen will change this and determine the mode
 PImage bird;
 PImage justBird;
@@ -66,4 +67,24 @@ void mode2() {
   for (int j = 0; j < 4; j++) {
     image(justBird, random(-200, 200), random(-200, 200));
   }
+=======
+PImage bird;
+
+void setup() {
+  size(500, 350);
+  background(255);
+  bird = loadImage("screamingBird.png");
+}
+
+void draw() {
+  fill(0);
+  textSize(30);
+  text("A", random(500), random(350));
+  image(bird, 0, 0);
+}
+
+void mousePressed() {
+  background(255);
+  image(bird, 0, 0);
+>>>>>>> cd8bd9f33dc6cb17f4c111c1acda0531ac1f9b58
 }
