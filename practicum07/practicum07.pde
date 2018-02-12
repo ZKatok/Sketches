@@ -35,7 +35,7 @@ void draw() {
     if (fingerIndex.isExtended() && !fingerThumb.isExtended()) {
       fill(colorrr, 100, 100);
       ellipse(thumbLoc.x, thumbLoc.y, 50, 50);
-    } else if (fingerIndex.isExtended() && fingerThumb.isExtended()) {
+    } else if (!fingerIndex.isExtended() && fingerThumb.isExtended()) {
       fill(0);
       ellipse(thumbLoc.x, thumbLoc.y, 10, 10);
     }
