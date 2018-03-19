@@ -1,3 +1,13 @@
+/* Zoa Katok
+   Exercise 036_02
+   Overloading a function. 
+   If you click the left side of the screen, 
+   mouseY will control the parameter of lines() (line color).
+   If you click the right side of the screen,
+   mouseY will control the first parameter of lines() (line color)
+   and mouseX will control the second parameter (line width and spacing).
+ */
+
 void setup() {
   size (500, 500);
   colorMode(HSB, 100, 100, 100);
