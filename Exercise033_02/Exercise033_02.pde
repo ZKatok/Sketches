@@ -1,3 +1,9 @@
+/* Zoa Katok
+   Exercise 33_02
+   Model of a two-stroke combustion engine:
+   a demonstration of mechanical motion.
+ */
+
 int radius = 50;
 float angle;
 float deg = -5;
